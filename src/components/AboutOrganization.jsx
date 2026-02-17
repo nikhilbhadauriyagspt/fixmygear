@@ -5,17 +5,17 @@ const AboutOrganization = () => {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
           
           {/* Left Visual - Aesthetic Bento Image */}
-          <div className="lg:col-span-5 relative order-first">
-            <div className="relative z-10 rounded-[48px] overflow-hidden shadow-3xl border-8 border-white group/img">
+          <div className="lg:col-span-5 relative order-first min-h-[400px] lg:min-h-0">
+            <div className="relative z-10 rounded-[48px] overflow-hidden shadow-3xl border-8 border-white group/img h-full">
                <img 
                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
                  alt="Repair Professional" 
                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700"
                />
-               <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/30 to-transparent" />
+               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/30 to-transparent pointer-events-none" />
             </div>
             
             {/* Aesthetic Floating Badge */}
