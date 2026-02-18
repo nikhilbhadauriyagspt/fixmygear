@@ -65,7 +65,7 @@ const BlogDetail = () => {
         <div className="flex flex-wrap items-center justify-between gap-6 border-y border-gray-100 py-8">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-gray-100 overflow-hidden border-2 border-white shadow-md">
-              <img src={`https://i.pravatar.cc/150?u=${post.author.split(' ')[0]}`} alt={post.author} className="w-full h-full object-cover grayscale" />
+              <img loading="lazy" src={`https://i.pravatar.cc/150?u=${post.author.split(' ')[0]}`} alt={post.author} className="w-full h-full object-cover grayscale" />
             </div>
             <div>
               <p className="text-xs font-black text-gray-900 uppercase leading-none mb-1">{post.author}</p>
@@ -86,7 +86,7 @@ const BlogDetail = () => {
       {/* Hero Image Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="rounded-[48px] overflow-hidden shadow-2xl h-[400px] md:h-[600px] relative border-8 border-gray-50">
-          <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+          <img loading="lazy" src={post.image} alt={post.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent" />
         </div>
       </div>

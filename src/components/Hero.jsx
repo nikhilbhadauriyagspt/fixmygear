@@ -122,7 +122,7 @@ const Hero = () => {
               {/* Main Image Bento Card */}
               <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-[48px] overflow-hidden shadow-2xl border-4 border-white">
                 {slides.map((slide, index) => (
-                  <img
+                  <img loading="eager"
                     key={index}
                     src={slide.image}
                     alt={slide.title}

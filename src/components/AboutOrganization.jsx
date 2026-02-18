@@ -10,7 +10,7 @@ const AboutOrganization = () => {
           {/* Left Visual - Aesthetic Bento Image */}
           <div className="lg:col-span-5 relative order-first min-h-[400px] lg:min-h-0">
             <div className="relative z-10 rounded-[48px] overflow-hidden shadow-3xl border-8 border-white group/img h-full">
-               <img 
+               <img loading="lazy" 
                  src="/about.jpg" 
                  alt="Repair Professional" 
                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700"

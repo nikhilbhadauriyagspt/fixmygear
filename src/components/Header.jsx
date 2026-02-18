@@ -88,7 +88,7 @@ const Header = () => {
                       </div>
                     </div>
                     <div className="w-[300px] bg-gray-50/50 p-6 flex flex-col">
-                      <div className="relative flex-grow rounded-[24px] overflow-hidden group/img mb-6 shadow-lg border border-white"><img src="/about-child1.jpg" alt="Featured" className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700" /><div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent" /><div className="absolute bottom-4 left-4 right-4"><p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-1">Expert Repair</p><h4 className="text-white font-bold text-sm">Certified Technicians at Your Doorstep</h4></div></div>
+                      <div className="relative flex-grow rounded-[24px] overflow-hidden group/img mb-6 shadow-lg border border-white"><img loading="lazy" src="/about-child1.jpg" alt="Featured" className="w-full h-full object-cover group-hover/img:scale-110 transition-transform duration-700" /><div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-transparent to-transparent" /><div className="absolute bottom-4 left-4 right-4"><p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-1">Expert Repair</p><h4 className="text-white font-bold text-sm">Certified Technicians at Your Doorstep</h4></div></div>
                       <button 
                         onClick={() => {
                           setIsModalOpen(true);

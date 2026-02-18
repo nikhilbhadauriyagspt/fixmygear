@@ -61,7 +61,7 @@ const Blog = () => {
         <Link to={`/blog/${featuredPost.id}`} className="block bg-white rounded-[48px] p-4 border border-gray-100 shadow-xl mb-16 group cursor-pointer hover:shadow-2xl transition-all duration-500">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="relative h-[400px] lg:h-[500px] rounded-[36px] overflow-hidden">
-              <img 
+              <img loading="lazy" 
                 src={featuredPost.image} 
                 alt="Featured" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -89,7 +89,7 @@ const Blog = () => {
               <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-8">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-gray-100 overflow-hidden">
-                    <img src={`https://i.pravatar.cc/150?u=${featuredPost.author.split(' ')[0]}`} alt="Author" className="w-full h-full object-cover grayscale" />
+                    <img loading="lazy" src={`https://i.pravatar.cc/150?u=${featuredPost.author.split(' ')[0]}`} alt="Author" className="w-full h-full object-cover grayscale" />
                   </div>
                   <div>
                     <p className="text-xs font-black text-gray-900 uppercase">{featuredPost.author}</p>
@@ -115,7 +115,7 @@ const Blog = () => {
             {posts.map((post) => (
               <Link key={post.id} to={`/blog/${post.id}`} className="bg-white rounded-[40px] p-4 border border-gray-100 hover:border-blue-100 hover:shadow-2xl transition-all duration-500 group flex flex-col sm:flex-row gap-6 cursor-pointer">
                 <div className="w-full sm:w-48 h-48 sm:h-auto rounded-[28px] overflow-hidden shrink-0 relative">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img loading="lazy" src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/10 transition-colors" />
                 </div>
                 

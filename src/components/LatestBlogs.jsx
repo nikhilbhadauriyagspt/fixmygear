@@ -57,7 +57,7 @@ const LatestBlogs = () => {
               className="group bg-white rounded-[40px] overflow-hidden border border-gray-100 hover:border-blue-100 transition-all duration-500 hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] flex flex-col"
             >
               <div className="relative h-60 overflow-hidden">
-                <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img loading="lazy" src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/95 backdrop-blur-sm rounded-full text-[9px] font-black uppercase text-blue-600 tracking-widest border border-white/50">
                   {post.category}
                 </div>

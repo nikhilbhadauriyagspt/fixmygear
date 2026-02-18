@@ -32,7 +32,7 @@ const ServiceDetail = () => {
             <div className="relative mb-12 group">
               <div className="rounded-[48px] p-4 bg-gray-50 border border-gray-100 shadow-2xl transition-all duration-500 group-hover:bg-blue-50 group-hover:border-blue-100">
                 <div className="rounded-[36px] overflow-hidden aspect-video sm:aspect-auto">
-                  <img 
+                  <img loading="lazy" 
                     src={service.image} 
                     alt={service.title} 
                     className="w-full h-full lg:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"

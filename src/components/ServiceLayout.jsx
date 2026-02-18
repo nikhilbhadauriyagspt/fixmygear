@@ -20,7 +20,7 @@ const ServiceLayout = ({ title, desc, longDesc, icon, image, extraContent }) => 
             <div className="relative mb-12 group">
               <div className="rounded-[48px] p-4 bg-gray-50 border border-gray-100 shadow-2xl transition-all duration-500 group-hover:bg-blue-50 group-hover:border-blue-100">
                 <div className="rounded-[36px] overflow-hidden aspect-video sm:aspect-auto">
-                  <img 
+                  <img loading="eager" 
                     src={image} 
                     alt={title} 
                     className="w-full h-full lg:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"

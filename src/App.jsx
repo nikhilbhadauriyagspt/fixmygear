@@ -1,33 +1,43 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Blog from './pages/Blog';
-import BlogDetail from './pages/BlogDetail';
-import Contact from './pages/Contact';
+
+// Pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogDetail = lazy(() => import('./pages/BlogDetail'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 // Policies
-import PrivacyPolicy from './policies/PrivacyPolicy';
-import TermsOfService from './policies/TermsOfService';
-import RefundPolicy from './policies/RefundPolicy';
-import CookiePolicy from './policies/CookiePolicy';
-import Disclaimer from './policies/Disclaimer';
+const PrivacyPolicy = lazy(() => import('./policies/PrivacyPolicy'));
+const TermsOfService = lazy(() => import('./policies/TermsOfService'));
+const RefundPolicy = lazy(() => import('./policies/RefundPolicy'));
+const CookiePolicy = lazy(() => import('./policies/CookiePolicy'));
+const Disclaimer = lazy(() => import('./policies/Disclaimer'));
 
 // Individual Service Pages
-import WashingMachine from './pages/services/WashingMachine';
-import Refrigerator from './pages/services/Refrigerator';
-import AirConditioner from './pages/services/AirConditioner';
-import Television from './pages/services/Television';
-import WaterPurifier from './pages/services/WaterPurifier';
-import MicrowaveOven from './pages/services/MicrowaveOven';
-import Dishwasher from './pages/services/Dishwasher';
-import CoffeeMaker from './pages/services/CoffeeMaker';
-import OvenGasStove from './pages/services/OvenGasStove';
-import ClothesDryer from './pages/services/ClothesDryer';
-import KitchenChimney from './pages/services/KitchenChimney';
-import OtherAppliances from './pages/services/OtherAppliances';
+const WashingMachine = lazy(() => import('./pages/services/WashingMachine'));
+const Refrigerator = lazy(() => import('./pages/services/Refrigerator'));
+const AirConditioner = lazy(() => import('./pages/services/AirConditioner'));
+const Television = lazy(() => import('./pages/services/Television'));
+const WaterPurifier = lazy(() => import('./pages/services/WaterPurifier'));
+const MicrowaveOven = lazy(() => import('./pages/services/MicrowaveOven'));
+const Dishwasher = lazy(() => import('./pages/services/Dishwasher'));
+const CoffeeMaker = lazy(() => import('./pages/services/CoffeeMaker'));
+const OvenGasStove = lazy(() => import('./pages/services/OvenGasStove'));
+const ClothesDryer = lazy(() => import('./pages/services/ClothesDryer'));
+const KitchenChimney = lazy(() => import('./pages/services/KitchenChimney'));
+const OtherAppliances = lazy(() => import('./pages/services/OtherAppliances'));
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="w-12 h-12 border-4 border-blue-100 border-t-blue-600 rounded-full animate-spin"></div>
+  </div>
+);
 
 function App() {
   return (
@@ -36,34 +46,36 @@ function App() {
       <div className="font-sans selection:bg-blue-100 selection:text-blue-600 bg-white min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogDetail />} />
-            <Route path="/contact" element={<Contact />} />
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:id" element={<BlogDetail />} />
+              <Route path="/contact" element={<Contact />} />
 
-            {/* Policy Routes */}
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/refund-policy" element={<RefundPolicy />} />
-            <Route path="/cookie-policy" element={<CookiePolicy />} />
-            <Route path="/disclaimer" element={<Disclaimer />} />
-            
-            {/* Individual Service Routes */}
-            <Route path="/service/washing-machine" element={<WashingMachine />} />
-            <Route path="/service/refrigerator" element={<Refrigerator />} />
-            <Route path="/service/air-conditioner" element={<AirConditioner />} />
-            <Route path="/service/television" element={<Television />} />
-            <Route path="/service/water-purifier" element={<WaterPurifier />} />
-            <Route path="/service/microwave-oven" element={<MicrowaveOven />} />
-            <Route path="/service/dishwasher" element={<Dishwasher />} />
-            <Route path="/service/coffee-maker" element={<CoffeeMaker />} />
-            <Route path="/service/oven-stove" element={<OvenGasStove />} />
-            <Route path="/service/clothes-dryer" element={<ClothesDryer />} />
-            <Route path="/service/kitchen-chimney" element={<KitchenChimney />} />
-            <Route path="/service/other-appliances" element={<OtherAppliances />} />
-          </Routes>
+              {/* Policy Routes */}
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/refund-policy" element={<RefundPolicy />} />
+              <Route path="/cookie-policy" element={<CookiePolicy />} />
+              <Route path="/disclaimer" element={<Disclaimer />} />
+              
+              {/* Individual Service Routes */}
+              <Route path="/service/washing-machine" element={<WashingMachine />} />
+              <Route path="/service/refrigerator" element={<Refrigerator />} />
+              <Route path="/service/air-conditioner" element={<AirConditioner />} />
+              <Route path="/service/television" element={<Television />} />
+              <Route path="/service/water-purifier" element={<WaterPurifier />} />
+              <Route path="/service/microwave-oven" element={<MicrowaveOven />} />
+              <Route path="/service/dishwasher" element={<Dishwasher />} />
+              <Route path="/service/coffee-maker" element={<CoffeeMaker />} />
+              <Route path="/service/oven-stove" element={<OvenGasStove />} />
+              <Route path="/service/clothes-dryer" element={<ClothesDryer />} />
+              <Route path="/service/kitchen-chimney" element={<KitchenChimney />} />
+              <Route path="/service/other-appliances" element={<OtherAppliances />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>

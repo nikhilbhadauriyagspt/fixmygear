@@ -260,7 +260,7 @@ const RepairSolutions = () => {
           {solutions.map((item, idx) => (
             <div key={idx} className="group bg-white rounded-[32px] overflow-hidden border border-gray-100 hover:border-blue-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 flex flex-col h-full">
               <div className="h-44 overflow-hidden relative">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img loading="lazy" src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent" />
                 <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md p-2 rounded-xl text-blue-600 shadow-sm border border-white">{item.icon}</div>
               </div>

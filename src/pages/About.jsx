@@ -33,7 +33,7 @@ const About = () => {
             </div>
             <div className="relative">
               <div className="rounded-[48px] overflow-hidden shadow-2xl border-8 border-gray-50 bg-gray-100">
-                <img 
+                <img loading="lazy" 
                   src="/about-main.jpg" 
                   alt="Our Team" 
                   className="w-full h-auto object-cover min-h-[400px] lg:min-h-[500px]" 
@@ -79,10 +79,10 @@ const About = () => {
             <div className="order-2 lg:order-1">
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-3xl overflow-hidden shadow-lg h-64 border-4 border-gray-50">
-                  <img src="/about-child1.jpg" className="w-full h-full object-cover" alt="Detail" />
+                  <img loading="lazy" src="/about-child1.jpg" className="w-full h-full object-cover" alt="Detail" />
                 </div>
                 <div className="rounded-3xl overflow-hidden shadow-lg h-64 mt-8 border-4 border-gray-50">
-                  <img src="/about-child2.jpg" className="w-full h-full object-cover" alt="Detail" />
+                  <img loading="lazy" src="/about-child2.jpg" className="w-full h-full object-cover" alt="Detail" />
                 </div>
               </div>
             </div>
@@ -151,7 +151,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <div className="rounded-[40px] overflow-hidden shadow-2xl border-4 border-white transform lg:rotate-2">
-                  <img src="/about-child1.jpg" alt="Process" className="w-full h-[500px] object-cover" />
+                  <img loading="lazy" src="/about-child1.jpg" alt="Process" className="w-full h-[500px] object-cover" />
                   <div className="absolute inset-0 bg-blue-600/10 mix-blend-multiply" />
                 </div>
                 {/* Floating Stat */}
