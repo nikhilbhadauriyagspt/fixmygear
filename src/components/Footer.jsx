@@ -64,7 +64,7 @@ const Footer = () => {
                 <span className="text-2xl font-black tracking-tighter text-gray-900 uppercase">
                   APPLIANCE<span className="text-blue-600">NERDY</span>
                 </span>
-                <span className="text-[10px] font-black tracking-[0.2em] text-gray-400 uppercase">Premium Repair</span>
+                <span className="text-[10px] font-black tracking-[0.2em] text-blue-500/80 uppercase">Premium Repair</span>
               </div>
             </Link>
             <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-sm mb-10">

@@ -1,7 +1,10 @@
-import { ShieldCheck, Clock, Award, Users, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Clock, Award, Users, CheckCircle2, ArrowRight, ChevronDown, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const About = () => {
+  const [showProcess, setShowProcess] = useState(false);
+
   return (
     <div className="pt-24 pb-0 bg-white min-h-screen">
       
@@ -29,11 +32,11 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="rounded-[32px] overflow-hidden shadow-2xl border-8 border-gray-50">
+              <div className="rounded-[48px] overflow-hidden shadow-2xl border-8 border-gray-50 bg-gray-100">
                 <img 
                   src="/about-main.jpg" 
                   alt="Our Team" 
-                  className="w-full h-full object-cover aspect-[4/3]" 
+                  className="w-full h-auto object-cover min-h-[400px] lg:min-h-[500px]" 
                 />
               </div>
             </div>
@@ -96,16 +99,71 @@ const About = () => {
                   </li>
                 ))}
               </ul>
-              <Link 
-                to="/#repair-process" 
-                className="group inline-flex items-center gap-4 bg-blue-50 text-blue-600 px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all active:scale-95 border border-blue-100/50 shadow-sm"
+              <button 
+                onClick={() => {
+                  setShowProcess(true);
+                  setTimeout(() => {
+                    document.getElementById('detailed-process')?.scrollIntoView({ behavior: 'smooth' });
+                  }, 100);
+                }}
+                className="group inline-flex items-center gap-4 bg-blue-50 text-blue-600 px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all active:scale-95 border border-blue-100/50 shadow-sm cursor-pointer"
               >
                 Learn More About Our Process <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* 4. Detailed Process Section - Animated Entrance */}
+      <div className={`transition-all duration-1000 ease-in-out overflow-hidden ${showProcess ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <section id="detailed-process" className="py-24 bg-gray-50 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <span className="text-blue-600 font-black text-[10px] uppercase tracking-[0.3em] mb-4 block">The Journey</span>
+              <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter mb-6">Our Repair Journey.</h2>
+              <p className="text-gray-500 max-w-2xl mx-auto font-medium">A step-by-step breakdown of how we ensure your appliances receive the highest level of care.</p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-4">
+                <ProcessAccordion 
+                  step="01" 
+                  title="Initial Diagnostics" 
+                  desc="Our technicians use precision tools to identify the root cause of the issue, ensuring we don't just fix symptoms but solve the real problem."
+                  isOpen={true}
+                />
+                <ProcessAccordion 
+                  step="02" 
+                  title="Genuine Parts Sourcing" 
+                  desc="We exclusively use original manufacturer parts. This stage ensures that every component replaced meets the exact specifications of your appliance."
+                />
+                <ProcessAccordion 
+                  step="03" 
+                  title="Precision Repair" 
+                  desc="The actual repair is performed in a controlled manner, following strict safety protocols and technical guidelines for your specific brand."
+                />
+                <ProcessAccordion 
+                  step="04" 
+                  title="Quality Assurance" 
+                  desc="Before we leave, we perform a multi-point test to verify that the appliance is working at peak efficiency and is safe for your family."
+                />
+              </div>
+              <div className="relative">
+                <div className="rounded-[40px] overflow-hidden shadow-2xl border-4 border-white transform lg:rotate-2">
+                  <img src="/about-child1.jpg" alt="Process" className="w-full h-[500px] object-cover" />
+                  <div className="absolute inset-0 bg-blue-600/10 mix-blend-multiply" />
+                </div>
+                {/* Floating Stat */}
+                <div className="absolute -bottom-6 -left-6 bg-white p-8 rounded-[32px] shadow-xl border border-gray-100 animate-bounce-slow">
+                  <div className="text-3xl font-black text-blue-600 mb-1">100%</div>
+                  <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-tight">Satisfaction <br /> Rate</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* 5. Final Call to Action */}
       <section className="py-24 bg-gray-900">
@@ -120,6 +178,32 @@ const About = () => {
         </div>
       </section>
 
+    </div>
+  );
+};
+
+const ProcessAccordion = ({ step, title, desc, isOpen: initialOpen = false }) => {
+  const [isOpen, setIsOpen] = useState(initialOpen);
+
+  return (
+    <div className={`p-6 rounded-3xl border transition-all duration-500 ${isOpen ? 'bg-white border-blue-100 shadow-xl' : 'bg-gray-100/50 border-transparent hover:bg-gray-100'}`}>
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between gap-4 text-left cursor-pointer"
+      >
+        <div className="flex items-center gap-4">
+          <span className={`text-sm font-black transition-colors duration-500 ${isOpen ? 'text-blue-600' : 'text-gray-400'}`}>{step}</span>
+          <h3 className="text-lg font-black text-gray-900 tracking-tight">{title}</h3>
+        </div>
+        <ChevronDown size={20} className={`text-gray-400 transition-transform duration-500 ${isOpen ? 'rotate-180 text-blue-600' : ''}`} />
+      </button>
+      <div className={`grid transition-all duration-500 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+        <div className="overflow-hidden">
+          <p className="text-gray-500 text-sm font-medium leading-relaxed border-l-2 border-blue-50 pl-4">
+            {desc}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
