@@ -30,7 +30,7 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">PROCESS</h2>
             <p>
-              To request a refund, please email customer service at <a href="mailto:support@appliancenerdy.shop" className="text-primary font-bold">support@appliancenerdy.shop</a> with your service order number. After receiving your request, we will review the service performed and notify you of the status of your refund.
+              To request a refund, please email customer service at <a href="mailto:info@appliancenerdy.shop" className="text-primary font-bold">info@appliancenerdy.shop</a> with your service order number. After receiving your request, we will review the service performed and notify you of the status of your refund.
             </p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-6 leading-relaxed font-bold">
               APPLIANCENERDY<br />
@@ -68,7 +68,7 @@ const RefundPolicy = () => {
               APPLIANCENERDY<br />
               128 E Pacific Coast Hwy, Long Beach, CA 90813, USA<br />
               United States<br />
-              Email: <a href="mailto:support@appliancenerdy.shop" className="text-primary hover:underline">support@appliancenerdy.shop</a>
+              Email: <a href="mailto:info@appliancenerdy.shop" className="text-primary hover:underline">info@appliancenerdy.shop</a>
             </address>
           </section>
         </div>

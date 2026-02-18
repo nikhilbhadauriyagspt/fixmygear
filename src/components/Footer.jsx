@@ -175,7 +175,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Send Email</span>
-                  <a href="mailto:support@appliancenerdy.shop" className="text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors tracking-tight">support@appliancenerdy.shop</a>
+                  <a href="mailto:info@appliancenerdy.shop" className="text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors tracking-tight">info@appliancenerdy.shop</a>
                 </div>
               </div>
               <div className="flex items-start gap-4 group">

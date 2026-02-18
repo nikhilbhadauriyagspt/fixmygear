@@ -75,7 +75,7 @@ const ContactSection = () => {
                </div>
                <h3 className="text-xl font-black text-gray-900 mb-2 uppercase tracking-tight">Digital Mail</h3>
                <p className="text-gray-500 text-sm font-bold mb-4">Expect our response within 2 business hours.</p>
-               <a href="mailto:support@appliancenerdy.shop" className="text-xl font-black text-blue-600 hover:text-blue-700 transition-colors">support@appliancenerdy.shop</a>
+               <a href="mailto:info@appliancenerdy.shop" className="text-xl font-black text-blue-600 hover:text-blue-700 transition-colors">info@appliancenerdy.shop</a>
             </div>
 
             <div className="p-8 rounded-[40px] bg-gray-50 border border-gray-100 group transition-all duration-500 hover:bg-white hover:shadow-2xl">

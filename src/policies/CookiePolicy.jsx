@@ -121,7 +121,7 @@ const CookiePolicy = () => {
               APPLIANCENERDY<br />
               128 E Pacific Coast Hwy, Long Beach, CA 90813, USA<br />
               United States<br />
-              Email: <a href="mailto:support@appliancenerdy.shop" className="text-primary">support@appliancenerdy.shop</a>
+              Email: <a href="mailto:info@appliancenerdy.shop" className="text-primary">info@appliancenerdy.shop</a>
             </address>
           </section>
         </div>
