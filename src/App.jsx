@@ -7,6 +7,13 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
+// Policies
+import PrivacyPolicy from './policies/PrivacyPolicy';
+import TermsOfService from './policies/TermsOfService';
+import RefundPolicy from './policies/RefundPolicy';
+import CookiePolicy from './policies/CookiePolicy';
+import Disclaimer from './policies/Disclaimer';
+
 // Individual Service Pages
 import WashingMachine from './pages/services/WashingMachine';
 import Refrigerator from './pages/services/Refrigerator';
@@ -33,6 +40,13 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
+
+            {/* Policy Routes */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
             
             {/* Individual Service Routes */}
             <Route path="/service/washing-machine" element={<WashingMachine />} />

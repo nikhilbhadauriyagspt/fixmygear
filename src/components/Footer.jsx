@@ -12,16 +12,19 @@ const Footer = () => {
       { name: 'Careers', path: '/' },
     ],
     services: [
-      { name: 'Washing Machine', path: '/' },
-      { name: 'Refrigerator', path: '/' },
-      { name: 'Air Conditioner', path: '/' },
-      { name: 'Microwave Oven', path: '/' },
+      { name: 'Washing Machine', path: '/service/washing-machine' },
+      { name: 'Refrigerator', path: '/service/refrigerator' },
+      { name: 'Air Conditioner', path: '/service/air-conditioner' },
+      { name: 'Television', path: '/service/television' },
+      { name: 'Water Purifier', path: '/service/water-purifier' },
+      { name: 'Kitchen Chimney', path: '/service/kitchen-chimney' },
     ],
     support: [
-      { name: 'Privacy Policy', path: '/' },
-      { name: 'Terms of Service', path: '/' },
-      { name: 'Refund Policy', path: '/' },
-      { name: 'Help Center', path: '/' },
+      { name: 'Privacy Policy', path: '/privacy-policy' },
+      { name: 'Terms of Service', path: '/terms-of-service' },
+      { name: 'Refund Policy', path: '/refund-policy' },
+      { name: 'Cookie Policy', path: '/cookie-policy' },
+      { name: 'Disclaimer', path: '/disclaimer' },
     ]
   };
 

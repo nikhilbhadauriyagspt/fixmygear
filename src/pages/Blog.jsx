@@ -191,9 +191,7 @@ const Blog = () => {
             <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter mb-6">
               Master Your Home.
             </h2>
-            <p className="text-gray-400 text-lg font-medium mb-10 leading-relaxed">
-              Join 15,000+ homeowners getting weekly maintenance tips, tech reviews, and exclusive repair discounts.
-            </p>
+          
             
             <div className="flex flex-col sm:flex-row gap-3 p-2 bg-white/10 backdrop-blur-xl border border-white/10 rounded-[28px] shadow-2xl">
               <input 
