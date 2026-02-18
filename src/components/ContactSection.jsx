@@ -5,23 +5,34 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data })
+    })
+    .then(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-      
-      // Reset form (optional, depending on UX preference)
+      setTimeout(() => setIsSuccess(false), 5000);
       e.target.reset();
-    }, 1500);
+    })
+    .catch(error => {
+      console.error(error);
+      setIsSubmitting(false);
+    });
   };
 
   return (
@@ -81,11 +92,13 @@ const ContactSection = () => {
           <div className="lg:w-2/3 bg-white border border-gray-100 rounded-[56px] p-8 lg:p-16 shadow-[0_32px_100px_rgba(0,0,0,0.05)] relative overflow-hidden group">
 
             <form className="space-y-10" onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value="contact" />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div className="relative group/input">
                   <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 block group-focus-within/input:text-blue-600 transition-colors">Full Name</label>
                   <input 
                     required
+                    name="fullName"
                     type="text" 
                     className="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:bg-white focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-bold text-gray-900 shadow-inner" 
                     placeholder="John Doe" 
@@ -95,6 +108,7 @@ const ContactSection = () => {
                   <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 block group-focus-within/input:text-blue-600 transition-colors">Email Address</label>
                   <input 
                     required
+                    name="email"
                     type="email" 
                     className="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:bg-white focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-bold text-gray-900 shadow-inner" 
                     placeholder="john@example.com" 
@@ -104,6 +118,7 @@ const ContactSection = () => {
                   <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 block group-focus-within/input:text-blue-600 transition-colors">Mobile Number</label>
                   <input 
                     required
+                    name="phone"
                     type="tel" 
                     className="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:bg-white focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-bold text-gray-900 shadow-inner" 
                     placeholder="+91 XXXXX XXXXX" 
@@ -115,6 +130,7 @@ const ContactSection = () => {
                 <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 block group-focus-within/input:text-blue-600 transition-colors">Subject</label>
                 <input 
                   required
+                  name="subject"
                   type="text" 
                   className="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:bg-white focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-bold text-gray-900 shadow-inner" 
                   placeholder="How can we help?" 
@@ -125,6 +141,7 @@ const ContactSection = () => {
                 <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest ml-1 mb-2 block group-focus-within/input:text-blue-600 transition-colors">Message</label>
                 <textarea 
                   required
+                  name="message"
                   rows="4" 
                   className="w-full bg-gray-50 border-none px-6 py-4 rounded-2xl focus:bg-white focus:ring-4 focus:ring-blue-500/5 outline-none transition-all font-bold text-gray-900 shadow-inner resize-none" 
                   placeholder="Write your message here..."

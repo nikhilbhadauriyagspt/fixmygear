@@ -13,13 +13,28 @@ const Blog = () => {
     if (!email) return;
 
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    
+    const encode = (data) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    };
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "newsletter", email })
+    })
+    .then(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
       setEmail('');
       setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    })
+    .catch(error => {
+      console.error(error);
+      setIsSubmitting(false);
+    });
   };
 
   const featuredPost = blogPosts[0];
@@ -150,8 +165,10 @@ const Blog = () => {
             </h2>
           
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 p-2 bg-white/10 backdrop-blur-xl border border-white/10 rounded-[28px] shadow-2xl">
+              <input type="hidden" name="form-name" value="newsletter" />
               <input 
                 required
+                name="email"
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

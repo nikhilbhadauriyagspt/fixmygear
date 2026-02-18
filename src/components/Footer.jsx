@@ -13,13 +13,28 @@ const Footer = () => {
     if (!email) return;
     
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    
+    const encode = (data) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    };
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "newsletter", email })
+    })
+    .then(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
       setEmail('');
       setTimeout(() => setIsSuccess(false), 5000);
-    }, 1000);
+    })
+    .catch(error => {
+      console.error(error);
+      setIsSubmitting(false);
+    });
   };
 
   const footerLinks = {
@@ -84,9 +99,11 @@ const Footer = () => {
                     <p className="text-gray-500 text-sm font-medium">Get the latest repair tips and exclusive offers.</p>
                   </div>
                   <form onSubmit={handleSubscribe} className="w-full md:w-auto">
+                    <input type="hidden" name="form-name" value="newsletter" />
                     <div className="flex p-1.5 bg-gray-50 border border-gray-100 rounded-2xl relative">
                       <input 
                         required
+                        name="email"
                         type="email" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}

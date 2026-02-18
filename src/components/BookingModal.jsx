@@ -16,18 +16,36 @@ const BookingModal = ({ isOpen, onClose, serviceTitle }) => {
     };
   }, [isOpen]);
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "booking", ...data, serviceTitle })
+    })
+    .then(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
       setTimeout(() => {
         setIsSuccess(false);
         onClose();
       }, 3000);
-    }, 1500);
+    })
+    .catch(error => {
+      console.error(error);
+      setIsSubmitting(false);
+    });
   };
 
   if (!isOpen) return null;
@@ -100,12 +118,15 @@ const BookingModal = ({ isOpen, onClose, serviceTitle }) => {
               </div>
 
               <form className="space-y-8" onSubmit={handleSubmit}>
+                <input type="hidden" name="form-name" value="booking" />
+                <input type="hidden" name="serviceTitle" value={serviceTitle} />
                 <div className="relative group">
                   <label className="absolute -top-2.5 left-4 px-2 bg-white text-[9px] font-black text-gray-400 uppercase tracking-widest transition-colors group-focus-within:text-blue-600">Full Name</label>
                   <div className="flex items-center gap-4 px-6 py-5 rounded-[24px] bg-gray-50 border border-gray-100 group-focus-within:border-blue-500 group-focus-within:bg-white transition-all shadow-inner group-focus-within:shadow-xl group-focus-within:shadow-blue-500/5">
                     <User size={18} className="text-gray-300 group-focus-within:text-blue-600 transition-colors" />
                     <input 
                       required
+                      name="fullName"
                       type="text" 
                       className="flex-1 bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-300" 
                       placeholder="e.g. Rahul Sharma" 
@@ -119,6 +140,7 @@ const BookingModal = ({ isOpen, onClose, serviceTitle }) => {
                     <Phone size={18} className="text-gray-300 group-focus-within:text-blue-600 transition-colors" />
                     <input 
                       required
+                      name="phone"
                       type="tel" 
                       className="flex-1 bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-300" 
                       placeholder="+91 XXXXX XXXXX" 
@@ -132,6 +154,7 @@ const BookingModal = ({ isOpen, onClose, serviceTitle }) => {
                     <Mail size={18} className="text-gray-300 group-focus-within:text-blue-600 transition-colors" />
                     <input 
                       required
+                      name="email"
                       type="email" 
                       className="flex-1 bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-300" 
                       placeholder="e.g. rahul@example.com" 
@@ -145,6 +168,7 @@ const BookingModal = ({ isOpen, onClose, serviceTitle }) => {
                     <MessageSquare size={18} className="text-gray-300 mt-1 group-focus-within:text-blue-600 transition-colors" />
                     <textarea 
                       required
+                      name="issue"
                       rows="3" 
                       className="flex-1 bg-transparent border-none outline-none font-bold text-gray-900 placeholder:text-gray-300 resize-none" 
                       placeholder="Explain the problem briefly..."
