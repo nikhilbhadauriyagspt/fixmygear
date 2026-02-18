@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { 
-  Wrench, Mail, Phone, ChevronDown, Menu, X, 
+  Wrench, ChevronDown, Menu, X, 
   WashingMachine, Refrigerator, Waves, Monitor, 
   Coffee, Snowflake, Microwave, Flame, Droplets, 
   Wind, Fan, Cpu, ArrowRight, Sparkles
@@ -62,27 +62,10 @@ const Header = () => {
             <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
               <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-2 rounded-xl group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-blue-500/20"><Wrench className="text-white" size={18} /></div>
               <div className="flex flex-col leading-none">
-                <span className="text-lg font-black tracking-tighter text-gray-900 uppercase">FIX<span className="text-blue-600">MY</span>GEAR</span>
+                <span className="text-lg font-black tracking-tighter text-gray-900 uppercase">APPLIANCE<span className="text-blue-600">NERDY</span></span>
                 <span className="text-[7px] font-black tracking-[0.2em] text-blue-500/80 uppercase">Premium Repair</span>
               </div>
             </Link>
-            <div className="hidden xl:flex items-center gap-6 border-l border-gray-900/5 pl-6">
-              <div className="flex items-center gap-3 group">
-                <div className="w-9 h-9 rounded-full bg-white/50 border border-white flex items-center justify-center text-blue-600 shadow-sm group-hover:scale-110 transition-transform"><Phone size={14} className="fill-blue-600" /></div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">24/7 Support</span>
-                  <a href="tel:+1800FIXGEAR" className="text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors tracking-tight">+1 (800) FIX-GEAR</a>
-                </div>
-              </div>
-              <div className="h-8 w-px bg-gray-900/5 hidden xl:block" />
-              <div className="flex items-center gap-3 group">
-                <div className="w-9 h-9 rounded-full bg-white/50 border border-white flex items-center justify-center text-gray-400 shadow-sm group-hover:scale-110 transition-transform"><Mail size={14} /></div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Write to us</span>
-                  <a href="mailto:fix@gear.com" className="text-sm font-semibold text-gray-600 hover:text-blue-600 transition-colors tracking-tight">fix@gear.com</a>
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="flex items-center gap-3 ml-auto">
@@ -121,7 +104,7 @@ const Header = () => {
               <Link to="/about" className={getLinkClass('/about')}>About</Link><Link to="/blog" className={getLinkClass('/blog')}>Blog</Link><Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
             </nav>
 
-            <div className="flex items-center gap-2 relative z-[70]"><a href="tel:+1800FIXGEAR" className="lg:hidden w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center shadow-lg active:scale-90 transition-all"><Phone size={18} /></a><button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden w-10 h-10 flex items-center justify-center rounded-2xl transition-all duration-300 border ${isMenuOpen ? 'bg-gray-900 text-white border-gray-900' : 'bg-white/50 text-gray-900 border-white'}`}>{isMenuOpen ? <X size={20} /> : <Menu size={20} />}</button></div>
+            <div className="flex items-center gap-2 relative z-[70]"><button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`lg:hidden w-10 h-10 flex items-center justify-center rounded-2xl transition-all duration-300 border ${isMenuOpen ? 'bg-gray-900 text-white border-gray-900' : 'bg-white/50 text-gray-900 border-white'}`}>{isMenuOpen ? <X size={20} /> : <Menu size={20} />}</button></div>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ const AboutOrganization = () => {
           <div className="lg:col-span-5 relative order-first min-h-[400px] lg:min-h-0">
             <div className="relative z-10 rounded-[48px] overflow-hidden shadow-3xl border-8 border-white group/img h-full">
                <img 
-                 src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" 
+                 src="/about.jpg" 
                  alt="Repair Professional" 
                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700"
                />
@@ -42,7 +42,7 @@ const AboutOrganization = () => {
             
             <div className="space-y-6 mb-12">
               <p className="text-gray-500 text-lg font-medium leading-relaxed">
-                At <span className="text-gray-900 font-black tracking-tight uppercase italic">FixMyGear</span>, we pride ourselves on being a leading provider of high-quality appliance repair and maintenance services. Our mission is to provide fast, reliable, and affordable technical solutions.
+                At <span className="text-gray-900 font-black tracking-tight uppercase italic">APPLIANCENERDY</span>, we pride ourselves on being a leading provider of high-quality appliance repair and maintenance services. Our mission is to provide fast, reliable, and affordable technical solutions.
               </p>
               <p className="text-gray-400 text-base font-medium leading-relaxed">
                 We focus on technical excellence, using advanced diagnostic tools and genuine parts to ensure every repair is performed to the highest standards. Our team of certified technicians is dedicated to extending the life of your appliances.

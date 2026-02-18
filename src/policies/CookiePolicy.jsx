@@ -9,15 +9,15 @@ const CookiePolicy = () => {
   return (
     <div className="bg-white min-h-screen pt-44 pb-24">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Cookie Policy for FIXMYGEAR</h1>
+        <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-4 uppercase">Cookie Policy for APPLIANCENERDY</h1>
         <p className="text-gray-500 mb-12 italic">Last Updated: February 18, 2026</p>
 
         <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
           <section>
             <p>
-              This Cookie Policy explains how FIXMYGEAR (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
+              This Cookie Policy explains how APPLIANCENERDY (“<strong>Company</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>”) uses
               cookies and similar tracking technologies when you visit our website
-              <a href="https://fixmygear.com/" className="text-primary hover:text-secondary"> https://fixmygear.com/</a> (the “<strong>Website</strong>”). This policy should be read together with our
+              <a href="https://appliancenerdy.shop/" className="text-primary hover:text-secondary"> https://appliancenerdy.shop/</a> (the “<strong>Website</strong>”). This policy should be read together with our
               <Link to="/privacy-policy" className="text-primary hover:underline font-bold"> PRIVACY POLICY</Link> and <Link to="/terms-of-service" className="text-primary hover:underline font-bold">TERMS OF SERVICE</Link>.
             </p>
           </section>
@@ -35,7 +35,7 @@ const CookiePolicy = () => {
 
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">2. How We Use Cookies</h2>
-            <p>FIXMYGEAR uses cookies and similar technologies to:</p>
+            <p>APPLIANCENERDY uses cookies and similar technologies to:</p>
             <ul className="list-disc pl-10 space-y-2">
               <li>Ensure the Website functions properly</li>
               <li>Maintain security and prevent fraudulent activity</li>
@@ -104,7 +104,7 @@ const CookiePolicy = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">6. Do Not Track Signals</h2>
             <p>
               Some browsers offer a “Do Not Track” (DNT) feature. At this time, there is no uniform
-              industry standard for recognizing DNT signals, and FIXMYGEAR does not currently
+              industry standard for recognizing DNT signals, and APPLIANCENERDY does not currently
               respond to such signals <Link to="/privacy-policy" className="text-primary hover:underline font-bold">PRIVACY POLICY</Link>.
             </p>
           </section>
@@ -118,11 +118,10 @@ const CookiePolicy = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">8. Contact Us</h2>
             <p>If you have questions or concerns about this Cookie Policy or our use of cookies, you may contact us at:</p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
-              FIXMYGEAR<br />
-              123 Tech Avenue, Innovation District<br />
-              New York, NY 10001<br />
+              APPLIANCENERDY<br />
+              128 E Pacific Coast Hwy, Long Beach, CA 90813, USA<br />
               United States<br />
-              Email: <a href="mailto:fix@gear.com" className="text-primary">fix@gear.com</a>
+              Email: <a href="mailto:support@appliancenerdy.shop" className="text-primary">support@appliancenerdy.shop</a>
             </address>
           </section>
         </div>

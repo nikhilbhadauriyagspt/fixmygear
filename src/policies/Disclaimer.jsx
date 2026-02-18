@@ -15,7 +15,7 @@ const Disclaimer = () => {
           <section className="bg-blue-50/50 p-8 rounded-3xl border border-blue-100/50">
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">General Disclaimer</h2>
             <p>
-              The information provided by <strong>FIXMYGEAR</strong> ("we," "us," or "our") on <a href="https://fixmygear.com/" className="text-primary hover:underline">https://fixmygear.com/</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.
+              The information provided by <strong>APPLIANCENERDY</strong> ("we," "us," or "our") on <a href="https://appliancenerdy.shop/" className="text-primary hover:underline">https://appliancenerdy.shop/</a> (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.
             </p>
             <p className="font-bold text-gray-900 mt-4">
               UNDER NO CIRCUMSTANCE SHALL WE HAVE ANY LIABILITY TO YOU FOR ANY LOSS OR DAMAGE OF ANY KIND INCURRED AS A RESULT OF THE USE OF THE SITE OR RELIANCE ON ANY INFORMATION PROVIDED ON THE SITE. YOUR USE OF THE SITE AND YOUR RELIANCE ON ANY INFORMATION ON THE SITE IS SOLELY AT YOUR OWN RISK.
@@ -59,11 +59,10 @@ const Disclaimer = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">Contact Us</h2>
             <p>If you have any questions regarding this disclaimer, please contact us at:</p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-4 leading-relaxed font-bold">
-              FIXMYGEAR<br />
-              123 Tech Avenue, Innovation District<br />
-              New York, NY 10001<br />
+              APPLIANCENERDY<br />
+              128 E Pacific Coast Hwy, Long Beach, CA 90813, USA<br />
               United States<br />
-              Email: <a href="mailto:fix@gear.com" className="text-primary hover:underline">fix@gear.com</a>
+              Email: <a href="mailto:support@appliancenerdy.shop" className="text-primary hover:underline">support@appliancenerdy.shop</a>
             </address>
           </section>
         </div>

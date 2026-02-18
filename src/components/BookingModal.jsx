@@ -165,11 +165,6 @@ const BookingModal = ({ isOpen, onClose, serviceTitle }) => {
                   )}
                 </button>
               </form>
-
-              <div className="mt-10 flex items-center justify-center gap-3">
-                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                 <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Technician Available for Today</span>
-              </div>
             </div>
           )}
         </div>

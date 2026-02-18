@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronRight, ChevronLeft, Calendar, ShieldCheck, Star, ArrowRight } from 'lucide-react';
+import { ChevronRight, ChevronLeft, ShieldCheck, Star, ArrowRight } from 'lucide-react';
 import BookingModal from './BookingModal';
 
 
@@ -135,19 +135,6 @@ const Hero = () => {
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-white/80 backdrop-blur-xl rounded-[32px] shadow-xl border border-white flex flex-col items-center justify-center p-4 animate-bounce-slow">
                 <ShieldCheck className="text-blue-600 mb-2" size={32} />
                 <span className="text-[8px] font-black text-gray-400 uppercase text-center leading-tight">Authentic <br /> Parts Only</span>
-              </div>
-
-              <div className="absolute -bottom-8 -left-8 w-48 bg-white/90 backdrop-blur-xl rounded-[32px] shadow-xl border border-white p-5 flex items-center gap-4 transition-transform hover:scale-105">
-                <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white shrink-0">
-                  <Calendar size={24} />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Availability</span>
-                  <span className="text-xs font-bold text-gray-900 tracking-tight leading-none">Open Now</span>
-                  <span className="text-[8px] font-bold text-emerald-500 mt-1 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" /> 24 Technicians Online
-                  </span>
-                </div>
               </div>
               
               {/* Carousel Controls (Minimalist) */}

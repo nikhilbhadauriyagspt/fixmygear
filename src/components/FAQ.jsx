@@ -15,10 +15,7 @@ const faqs = [
     question: "Is there a warranty on your services?",
     answer: "Absolutely. We provide a 90-day comprehensive warranty on both the spare parts we replace and the labor performed during the repair session."
   },
-  {
-    question: "What are your service visiting charges?",
-    answer: "Our standard visiting and diagnostic charge is $29. However, if you choose to proceed with the repair service, this diagnostic fee is fully waived off."
-  },
+  
   {
     question: "Do you provide emergency same-day service?",
     answer: "Yes, we offer priority emergency services. Book before 12:00 PM and we guarantee a technician visit by the evening of the same day."

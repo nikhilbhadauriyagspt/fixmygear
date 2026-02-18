@@ -1,4 +1,4 @@
-import { Wrench, Mail, Phone, Facebook, Instagram, Twitter, Linkedin, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { Wrench, Mail, MapPin, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -9,7 +9,7 @@ const Footer = () => {
       { name: 'About Us', path: '/about' },
       { name: 'Latest Blog', path: '/blog' },
       { name: 'Contact', path: '/contact' },
-      { name: 'Careers', path: '/' },
+     
     ],
     services: [
       { name: 'Washing Machine', path: '/service/washing-machine' },
@@ -44,20 +44,14 @@ const Footer = () => {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-2xl font-black tracking-tighter text-gray-900 uppercase">
-                  FIX<span className="text-blue-600">MY</span>GEAR
+                  APPLIANCE<span className="text-blue-600">NERDY</span>
                 </span>
-                <span className="text-[10px] font-black tracking-[0.2em] text-gray-400 uppercase">Premium Repair Services</span>
+                <span className="text-[10px] font-black tracking-[0.2em] text-gray-400 uppercase">Premium Repair</span>
               </div>
             </Link>
             <p className="text-gray-500 text-lg font-medium leading-relaxed max-w-sm mb-10">
-              Your trusted partner for high-end appliance repairs. Delivering precision and reliability to your doorstep since 2015.
+              Your trusted partner for high-end appliance repairs. Delivering precision and reliability to your doorstep since 2026.
             </p>
-            <div className="flex gap-4">
-              <SocialIcon icon={<Facebook size={18} />} />
-              <SocialIcon icon={<Instagram size={18} />} />
-              <SocialIcon icon={<Twitter size={18} />} />
-              <SocialIcon icon={<Linkedin size={18} />} />
-            </div>
           </div>
 
           <div className="lg:col-span-7">
@@ -123,22 +117,22 @@ const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <h4 className="text-[11px] font-black text-gray-900 uppercase tracking-[0.3em] mb-8">Contact Info</h4>
             <div className="space-y-6">
-              <div className="flex items-center gap-4 group">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
-                  <Phone size={18} />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Call Anytime</span>
-                  <a href="tel:+1800FIXGEAR" className="text-sm font-black text-gray-900 hover:text-blue-600 transition-colors tracking-tight">+1 (800) FIX-GEAR</a>
-                </div>
-              </div>
-              <div className="flex items-center gap-4 group">
-                <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
+              <div className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
                   <Mail size={18} />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Send Email</span>
-                  <a href="mailto:fix@gear.com" className="text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors tracking-tight">fix@gear.com</a>
+                  <a href="mailto:support@appliancenerdy.shop" className="text-sm font-bold text-gray-900 hover:text-blue-600 transition-colors tracking-tight">support@appliancenerdy.shop</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4 group">
+                <div className="w-10 h-10 rounded-xl bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                  <MapPin size={18} />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[9px] font-black text-gray-400 uppercase tracking-widest leading-none mb-1">Visit Us</span>
+                  <span className="text-sm font-bold text-gray-900 tracking-tight">128 E Pacific Coast Hwy, Long Beach, CA 90813, USA</span>
                 </div>
               </div>
             </div>
@@ -159,7 +153,7 @@ const Footer = () => {
           
           <div className="text-center md:text-right">
             <p className="text-gray-400 text-xs font-bold uppercase tracking-[0.1em] mb-1">
-              &copy; {currentYear} FIXMYGEAR. Built with Precision.
+              &copy; {currentYear} APPLIANCENERDY. Built with Precision.
             </p>
             <p className="text-[10px] text-gray-300 font-medium">
               Made with passion for perfect appliance maintenance.
@@ -171,11 +165,5 @@ const Footer = () => {
     </footer>
   );
 };
-
-const SocialIcon = ({ icon }) => (
-  <button className="w-12 h-12 rounded-2xl bg-white border border-gray-100 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 hover:shadow-xl hover:shadow-blue-600/20 transition-all duration-300 cursor-pointer">
-    {icon}
-  </button>
-);
 
 export default Footer;

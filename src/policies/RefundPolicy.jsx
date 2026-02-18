@@ -30,13 +30,12 @@ const RefundPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4 uppercase">PROCESS</h2>
             <p>
-              To request a refund, please email customer service at <a href="mailto:fix@gear.com" className="text-primary font-bold">fix@gear.com</a> with your service order number. After receiving your request, we will review the service performed and notify you of the status of your refund.
+              To request a refund, please email customer service at <a href="mailto:support@appliancenerdy.shop" className="text-primary font-bold">support@appliancenerdy.shop</a> with your service order number. After receiving your request, we will review the service performed and notify you of the status of your refund.
             </p>
             <address className="not-italic bg-gray-50 p-8 rounded-2xl border border-gray-100 mt-6 leading-relaxed font-bold">
-              FIXMYGEAR<br />
+              APPLIANCENERDY<br />
               Attn: Returns/Refunds<br />
-              123 Tech Avenue, Innovation District<br />
-              New York, NY 10001<br />
+              128 E Pacific Coast Hwy, Long Beach, CA 90813, USA<br />
               United States
             </address>
           </section>
@@ -66,7 +65,7 @@ const RefundPolicy = () => {
               If you have any questions concerning our refund policy, please contact us at:
             </p>
             <div className="bg-primary text-white p-8 rounded-2xl shadow-xl mt-4 text-center">
-              <a href="mailto:fix@gear.com" className="text-secondary font-bold text-lg hover:underline">fix@gear.com</a>
+              <a href="mailto:support@appliancenerdy.shop" className="text-secondary font-bold text-lg hover:underline">support@appliancenerdy.shop</a>
             </div>
           </section>
         </div>

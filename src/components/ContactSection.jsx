@@ -1,4 +1,4 @@
-import { Phone, Mail, Send, ArrowRight, Sparkles, MapPin, Globe } from 'lucide-react';
+import { Mail, Send, ArrowRight, Sparkles, MapPin, Globe } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -18,26 +18,17 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="flex flex-col lg:flex-row gap-12 items-start justify-center">
           
           {/* Contact Details Column */}
-          <div className="lg:col-span-4 space-y-8">
-            <div className="p-8 rounded-[40px] bg-gray-50 border border-gray-100 group transition-all duration-500 hover:bg-white hover:shadow-2xl">
-               <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white mb-6 shadow-xl shadow-blue-600/20 group-hover:scale-110 transition-transform">
-                 <Phone size={24} />
-               </div>
-               <h3 className="text-xl font-black text-gray-900 mb-2 uppercase tracking-tight">Direct Line</h3>
-               <p className="text-gray-500 text-sm font-bold mb-4">Available 24/7 for urgent inquiries.</p>
-               <a href="tel:+1800FIXGEAR" className="text-xl font-black text-blue-600 hover:text-blue-700 transition-colors">+1 (800) FIX-GEAR</a>
-            </div>
-
+          <div className="lg:w-1/3 space-y-8">
             <div className="p-8 rounded-[40px] bg-gray-50 border border-gray-100 group transition-all duration-500 hover:bg-white hover:shadow-2xl">
                <div className="w-12 h-12 rounded-2xl bg-gray-900 flex items-center justify-center text-white mb-6 shadow-xl shadow-gray-900/20 group-hover:scale-110 transition-transform">
                  <Mail size={24} />
                </div>
                <h3 className="text-xl font-black text-gray-900 mb-2 uppercase tracking-tight">Digital Mail</h3>
                <p className="text-gray-500 text-sm font-bold mb-4">Expect our response within 2 business hours.</p>
-               <a href="mailto:fix@gear.com" className="text-xl font-black text-blue-600 hover:text-blue-700 transition-colors">fix@gear.com</a>
+               <a href="mailto:support@appliancenerdy.shop" className="text-xl font-black text-blue-600 hover:text-blue-700 transition-colors">support@appliancenerdy.shop</a>
             </div>
 
             <div className="p-8 rounded-[40px] bg-gray-50 border border-gray-100 group transition-all duration-500 hover:bg-white hover:shadow-2xl">
@@ -46,18 +37,12 @@ const ContactSection = () => {
                </div>
                <h3 className="text-xl font-black text-gray-900 mb-2 uppercase tracking-tight">Main HQ</h3>
                <p className="text-gray-500 text-sm font-bold mb-4">Visit our central diagnostic facility.</p>
-               <span className="text-sm font-black text-gray-900 leading-tight block">123 Tech Avenue, Innovation District,<br />New York, NY 10001</span>
+               <span className="text-sm font-black text-gray-900 leading-tight block">128 E Pacific Coast Hwy, Long Beach,<br />CA 90813, USA</span>
             </div>
           </div>
 
           {/* Contact Form Column */}
-          <div className="lg:col-span-8 bg-white border border-gray-100 rounded-[56px] p-8 lg:p-16 shadow-[0_32px_100px_rgba(0,0,0,0.05)] relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 blur-[80px] -z-10 group-hover:bg-blue-100 transition-colors duration-700" />
-            
-            <div className="mb-12">
-              <h2 className="text-3xl font-black text-gray-900 tracking-tight mb-2">Send a Message</h2>
-              <p className="text-gray-400 text-xs font-black uppercase tracking-[0.2em]">Our experts are ready to assist you.</p>
-            </div>
+          <div className="lg:w-2/3 bg-white border border-gray-100 rounded-[56px] p-8 lg:p-16 shadow-[0_32px_100px_rgba(0,0,0,0.05)] relative overflow-hidden group">
 
             <form className="space-y-10">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
